@@ -3,32 +3,32 @@ from Apriori import *
 
 if __name__ == '__main__':
     apriori = Apriori('../data/data.transaction', 20)
-    L = apriori.execute()
+    apriori.execute()
 
     # Q3.1a:
     total = 0
-    for level in L:
+    for level in apriori.L:
         total += len(level)
     print '3.1a: For minsup=20, Total frequent patterns:', total
 
     # Q3.1b
-    print '3.1b: Frequent patterns with length 3:', len(L[2])#, '. They are:', L[2]
+    print '3.1b: Frequent patterns with length 3:', len(apriori.L[2])#, '. They are:', L[2]
 
     # Q3.1c
     maxPatterns = apriori.getMaxPatterns()
     print '3.1c: Max patterns:', len(maxPatterns)#, '. They are:', maxPatterns
-
+    # print apriori.Lcounts
 
     apriori = Apriori('../data/data.transaction', 10)
     L = apriori.execute()
     # Q3.2a:
     total = 0
-    for level in L:
+    for level in apriori.L:
         total += len(level)
     print '3.2a: For minsup=10, Total frequent patterns:', total
 
     # Q3.2b
-    print '3.2b: Frequent patterns with length 3:', len(L[2])#, '. They are:', L[2]
+    print '3.2b: Frequent patterns with length 3:', len(apriori.L[2])#, '. They are:', L[2]
 
     # Q3.2c
     maxPatterns = apriori.getMaxPatterns()

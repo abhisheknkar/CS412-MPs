@@ -53,7 +53,7 @@ class Apriori():
             self.Lcounts[k] = {}
             for transaction in self.database:
                 for candidate in C:
-                    if set(candidate)<set(transaction):
+                    if set(candidate)<=set(transaction):
                         if tuple(candidate) not in self.Lcounts[k]:
                             self.Lcounts[k][tuple(candidate)] = 0
                         self.Lcounts[k][tuple(candidate)] += 1
@@ -90,7 +90,7 @@ class Apriori():
                 for subset in level:
                     maxFlag = True
                     for bigSubset in self.L[idx+1]:
-                        if set(subset) < set(bigSubset):
+                        if set(subset) <= set(bigSubset):
                             maxFlag = False
                             break
                     if maxFlag == True:
