@@ -17,7 +17,7 @@ if __name__ == '__main__':
     # Q3.1c
     maxPatterns = apriori.getMaxPatterns()
     print '3.1c: Max patterns:', len(maxPatterns)#, '. They are:', maxPatterns
-    # print apriori.Lcounts
+    print maxPatterns
 
     apriori = Apriori('../data/data.transaction', 10)
     L = apriori.execute()
@@ -33,6 +33,7 @@ if __name__ == '__main__':
     # Q3.2c
     maxPatterns = apriori.getMaxPatterns()
     print '3.2c: Max patterns:', len(maxPatterns)#, '. They are:', maxPatterns
+    print maxPatterns
 
     # Q3.2d
     print '3.2d: Confidence for [C,E]->[A] is:\n', apriori.getConfidence(['C','E'],['A'])
