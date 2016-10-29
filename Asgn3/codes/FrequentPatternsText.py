@@ -1,6 +1,8 @@
 __author__ = 'Abhishek'
 import time
 # from collections import OrderedDict
+from Apriori import Apriori
+import operator
 
 class LDAInput():
     def __init__(self, inputFile='../data/paper.txt', vocabFile='../data/vocab.txt', tokenizeOut='../data/title.txt', tokenizeFlag=False, createVocabFlag=False):
@@ -57,7 +59,7 @@ class LDAInput():
         f1.close()
         f2.close()
 
-class FPTopics():
+class PartitionByTopics():
     def __init__(self, inputFile='../data/result/word-assignments.dat', transactionFolder='../data/transactionsByTopic/',topics=5, createTransactions=False):
         self.topics = topics
         if createTransactions:
@@ -85,9 +87,41 @@ class FPTopics():
         for i in range(self.topics):
             f[i].close()
 
+def getFrequentPatterns(folderIn, folderOut, minSupPercentage=5):
+    numFiles = 5
+    for i in range(numFiles):
+        f1 = open(folderOut + 'pattern-'+str(i)+'.txt','w')
+        apriori = Apriori(folderIn+'topic-'+str(i)+'.txt', setRelative=True, relativeMinSup=0.01)
+        apriori.execute()
+
+        # Sort the frequent patterns
+        if len(apriori.Lcounts)==0:
+            continue
+        allPatterns = apriori.Lcounts[1].copy()
+        for count in range(len(apriori.Lcounts)-1):
+            allPatterns.update(apriori.Lcounts[count+2])
+        sortedPatterns = sorted(allPatterns.items(), key=operator.itemgetter(1),reverse=True)
+        for pattern in sortedPatterns:
+            if type(pattern[0]) is str:
+                patternString = pattern[0]
+            else:
+                patternString = ' '.join(pattern[0])
+            f1.write(str(pattern[1])+ ' '+ patternString+'\n')
+
+        f1.close()
+
+def getClosedPatterns(folderIn, folderOut):
+    pass
+
+def getMaxPatterns(folderIn, folderOut):
+    pass
+
 if __name__ == '__main__':
     t0 = time.time()
+
     # f = LDAInput(createVocabFlag=True, tokenizeFlag=True)
-    f = FPTopics(createTransactions=True)
+    # f = PartitionByTopics(createTransactions=True)
+
+    getFrequentPatterns('../data/transactionsByTopic/','../data/patterns/')
 
     print 'Time elapsed: ', time.time()-t0
