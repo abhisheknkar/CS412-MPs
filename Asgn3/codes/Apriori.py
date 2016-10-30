@@ -25,7 +25,7 @@ class Apriori():
         #             itemCounts[item] += 1
 
         for item in self.reverse_index:
-            if len(self.reverse_index[item])>self.minsup:
+            if len(self.reverse_index[item])>=self.minsup:
                 itemCounts[item] = len(self.reverse_index[item])
 
         frequentOnes = []
@@ -110,21 +110,55 @@ class Apriori():
         else:
             return 0
 
-    def getMaxPatterns(self):
-        maxPatterns = []
-        for idx, level in enumerate(self.L):
-            if idx == len(self.L)-1:
-                for subset in level:
-                    maxPatterns.append(subset)
+    def getClosedPatterns(self):
+        self.closedPatterns = {}
+
+        if len(self.Lcounts[len(self.Lcounts)]) == 0:
+            maxLevel = len(self.Lcounts) - 1
+        else:
+            maxLevel = len(self.Lcounts)
+        for idx in range(maxLevel):
+            if idx == maxLevel-1:
+                for itemset in self.Lcounts[maxLevel]:
+                    self.closedPatterns[self.itemSet2Tuple(itemset)] = self.Lcounts[maxLevel][itemset]
             else:
                 # Check if each subset of the current level is a member of any subset of the next level
-                for subset in level:
+                for itemset in self.Lcounts[idx+1]:
+                    closedFlag = True
+                    for bigItemset in self.Lcounts[idx+2]:
+                        if set(itemset) <= set(bigItemset):
+                            if self.Lcounts[idx+1][itemset] == self.Lcounts[idx+2][bigItemset]:
+                                closedFlag = False
+                                break
+                    if closedFlag == True:
+                        self.closedPatterns[self.itemSet2Tuple(itemset)] = self.Lcounts[idx+1][itemset]
+        return self.closedPatterns
+
+    def getMaxPatterns(self):
+        self.maxPatterns = {}
+
+        if len(self.Lcounts[len(self.Lcounts)]) == 0:
+            maxLevel = len(self.Lcounts) - 1
+        else:
+            maxLevel = len(self.Lcounts)
+        for idx in range(maxLevel):
+            if idx == maxLevel-1:
+                for itemset in self.Lcounts[maxLevel]:
+                    self.maxPatterns[self.itemSet2Tuple(itemset)] = self.Lcounts[maxLevel][itemset]
+            else:
+                # Check if each subset of the current level is a member of any subset of the next level
+                for itemset in self.Lcounts[idx+1]:
                     maxFlag = True
-                    for bigSubset in self.L[idx+1]:
-                        if set(subset) <= set(bigSubset):
+                    for bigItemset in self.Lcounts[idx+2]:
+                        if set(itemset) <= set(bigItemset):
                             maxFlag = False
                             break
                     if maxFlag == True:
-                        maxPatterns.append(subset)
+                        self.maxPatterns[self.itemSet2Tuple(itemset)] = self.Lcounts[idx+1][itemset]
+        return self.maxPatterns
 
-        return maxPatterns
+    def itemSet2Tuple(self, itemSet):
+        if type(itemSet) == str:
+            return itemSet
+        else:
+            return tuple(itemSet)

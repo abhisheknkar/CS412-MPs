@@ -29,13 +29,22 @@ class LDAInput():
         f1.close()
         f2.close()
 
-    def getVocab(self, vocabFile):
+    def getVocab(self, vocabFile='../data/vocab.txt'):
         f1 = open(vocabFile, 'r')
         vocab ={}
         for idx,line in enumerate(f1.readlines()):
             vocab[line.strip()] = idx
         f1.close()
         return vocab
+
+    def getReverseVocab(self, vocabFile='../data/vocab.txt'):
+        f1 = open(vocabFile, 'r')
+        reverseVocab ={}
+        for idx,line in enumerate(f1.readlines()):
+            reverseVocab[idx] = line.strip()
+        f1.close()
+        return reverseVocab
+
 
     def tokenize(self, inputFile, tokenizeOut):
         f1 = open(inputFile,'r')
@@ -88,12 +97,12 @@ class PartitionByTopics():
             f[i].close()
 
 def getFrequentPatterns(folderIn, folderOut, minSupPercentage=5):
-    numFiles = 5
+    print 'Getting Frequent Patterns'
+    numFiles = 1
     for i in range(numFiles):
         f1 = open(folderOut + 'pattern-'+str(i)+'.txt','w')
         apriori = Apriori(folderIn+'topic-'+str(i)+'.txt', setRelative=True, relativeMinSup=0.01)
         apriori.execute()
-
         # Sort the frequent patterns
         if len(apriori.Lcounts)==0:
             continue
@@ -107,14 +116,112 @@ def getFrequentPatterns(folderIn, folderOut, minSupPercentage=5):
             else:
                 patternString = ' '.join(pattern[0])
             f1.write(str(pattern[1])+ ' '+ patternString+'\n')
-
         f1.close()
 
-def getClosedPatterns(folderIn, folderOut):
-    pass
+def getClosedPatterns(folderIn, folderOut, minSupPercentage=5):
+    print 'Getting Closed Patterns'
+    numFiles = 5
+    for i in range(numFiles):
+        f1 = open(folderOut + 'closed-'+str(i)+'.txt','w')
+        apriori = Apriori(folderIn+'topic-'+str(i)+'.txt', setRelative=True, relativeMinSup=0.01)
+        apriori.execute()
+
+        closedPatterns = apriori.getClosedPatterns()
+        print 'Closed Patterns found: ', len(closedPatterns)
+
+        # Sort the frequent patterns
+        sortedPatterns = sorted(closedPatterns.items(), key=operator.itemgetter(1),reverse=True)
+        for pattern in sortedPatterns:
+            if type(pattern[0]) is str:
+                patternString = pattern[0]
+            else:
+                patternString = ' '.join(pattern[0])
+            f1.write(str(pattern[1])+ ' '+ patternString+'\n')
+        f1.close()
 
 def getMaxPatterns(folderIn, folderOut):
-    pass
+    print 'Getting Max Patterns'
+    numFiles = 5
+    for i in range(numFiles):
+        f1 = open(folderOut + 'max-'+str(i)+'.txt','w')
+        apriori = Apriori(folderIn+'topic-'+str(i)+'.txt', setRelative=True, relativeMinSup=0.01)
+        apriori.execute()
+
+        maxPatterns = apriori.getMaxPatterns()
+        print 'Max Patterns found: ', len(maxPatterns)
+        # Sort the frequent patterns
+        sortedPatterns = sorted(maxPatterns.items(), key=operator.itemgetter(1),reverse=True)
+        for pattern in sortedPatterns:
+            if type(pattern[0]) is str:
+                patternString = pattern[0]
+            else:
+                patternString = ' '.join(pattern[0])
+            f1.write(str(pattern[1])+ ' '+ patternString+'\n')
+        f1.close()
+
+def testApriori():
+    apriori = Apriori('../data/test/testDB.txt', minsup=2)
+    apriori.execute()
+    closedP = apriori.getClosedPatterns()
+    maxP = apriori.getMaxPatterns()
+
+    print 'Counts: ', apriori.Lcounts
+    print 'Closed Patterns', closedP
+    print 'Max Patterns', maxP
+
+def getClosedPatternsWords(folderIn, folderOut, minSupPercentage=5):
+    ldainput = LDAInput()
+    reverseVocab = ldainput.getReverseVocab()
+
+    print 'Getting Closed Patterns'
+    numFiles = 5
+    for i in range(numFiles):
+        f1 = open(folderOut + 'closed-'+str(i)+'.txt','w')
+        apriori = Apriori(folderIn+'topic-'+str(i)+'.txt', setRelative=True, relativeMinSup=0.01)
+        apriori.execute()
+
+        closedPatterns = apriori.getClosedPatterns()
+        print 'Closed Patterns found: ', len(closedPatterns)
+
+        # Sort the frequent patterns
+        sortedPatterns = sorted(closedPatterns.items(), key=operator.itemgetter(1),reverse=True)
+        for pattern in sortedPatterns:
+            words = []
+            if type(pattern[0]) == str:
+                words.append(reverseVocab[int(pattern[0])])
+            else:
+                for idx in apriori.itemSet2Tuple(pattern[0]):
+                    words.append(reverseVocab[int(idx)])
+            patternString = ' '.join(words)
+            f1.write(str(pattern[1])+ ' '+ patternString+'\n')
+        f1.close()
+
+def getMaxPatternsWords(folderIn, folderOut, minSupPercentage=5):
+    ldainput = LDAInput()
+    reverseVocab = ldainput.getReverseVocab()
+
+    print 'Getting Max Patterns'
+    numFiles = 5
+    for i in range(numFiles):
+        f1 = open(folderOut + 'max-'+str(i)+'.txt','w')
+        apriori = Apriori(folderIn+'topic-'+str(i)+'.txt', setRelative=True, relativeMinSup=0.01)
+        apriori.execute()
+
+        maxPatterns = apriori.getMaxPatterns()
+        print 'Max Patterns found: ', len(maxPatterns)
+
+        # Sort the frequent patterns
+        sortedPatterns = sorted(maxPatterns.items(), key=operator.itemgetter(1),reverse=True)
+        for pattern in sortedPatterns:
+            words = []
+            if type(pattern[0]) == str:
+                words.append(reverseVocab[int(pattern[0])])
+            else:
+                for idx in apriori.itemSet2Tuple(pattern[0]):
+                    words.append(reverseVocab[int(idx)])
+            patternString = ' '.join(words)
+            f1.write(str(pattern[1])+ ' '+ patternString+'\n')
+        f1.close()
 
 if __name__ == '__main__':
     t0 = time.time()
@@ -122,6 +229,12 @@ if __name__ == '__main__':
     # f = LDAInput(createVocabFlag=True, tokenizeFlag=True)
     # f = PartitionByTopics(createTransactions=True)
 
-    getFrequentPatterns('../data/transactionsByTopic/','../data/patterns/')
+    # getFrequentPatterns('../data/transactionsByTopic/','../data/patterns/')
+    # getClosedPatterns('../data/transactionsByTopic/','../data/closed/')
+    # getMaxPatterns('../data/transactionsByTopic/','../data/max/')
+
+    # getClosedPatternsWords('../data/transactionsByTopic/','../data/closedWords/')
+    getMaxPatternsWords('../data/transactionsByTopic/','../data/maxWords/')
+    # testApriori()
 
     print 'Time elapsed: ', time.time()-t0
