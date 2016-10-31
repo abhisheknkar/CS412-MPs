@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd504918-e05d-40b5-a823-7841058d57eb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/codes/Apriori.py" afterPath="$PROJECT_DIR$/Asgn3/codes/Apriori.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Asgn3/codes/MaxClosed.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Asgn3/codes/MinePatterns.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Asgn3/codes/PreprocessLDA.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Asgn3/codes/Reorganize.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Asgn3/codes/Rerank.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/codes/FrequentPatternsText.py" afterPath="$PROJECT_DIR$/Asgn3/codes/FrequentPatternsText.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -25,18 +29,99 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FrequentPatternsText.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FrequentPatternsText.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Asgn3/codes/FrequentPatternsText.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13822526">
-              <caret line="214" column="38" selection-start-line="214" selection-start-column="38" selection-end-line="214" selection-end-column="38" />
+            <state vertical-scroll-proportion="-7.034483">
+              <caret line="343" column="19" selection-start-line="343" selection-start-column="19" selection-end-line="343" selection-end-column="19" />
               <folding>
-                <element signature="e#608#1067#0" expanded="false" />
-                <element signature="e#1628#2337#0" expanded="false" />
-                <element signature="e#2370#3489#0" expanded="false" />
-                <element signature="e#2532#2653#0" expanded="false" />
-                <element signature="e#2731#3489#0" expanded="false" />
-                <element signature="e#6137#6398#0" expanded="false" />
+                <element signature="e#24#35#0" expanded="true" />
+                <element signature="e#134#2330#0" expanded="false" />
+                <element signature="e#300#542#0" expanded="false" />
+                <element signature="e#601#1060#0" expanded="false" />
+                <element signature="e#1125#1297#0" expanded="false" />
+                <element signature="e#1369#1562#0" expanded="false" />
+                <element signature="e#1621#2330#0" expanded="false" />
+                <element signature="e#2363#3482#0" expanded="false" />
+                <element signature="e#2525#2646#0" expanded="false" />
+                <element signature="e#2724#3482#0" expanded="false" />
+                <element signature="e#3554#4438#0" expanded="false" />
+                <element signature="e#4508#5294#0" expanded="false" />
+                <element signature="e#5341#6105#0" expanded="false" />
+                <element signature="e#6130#6391#0" expanded="false" />
+                <element signature="e#6466#7475#0" expanded="false" />
+                <element signature="e#7547#8535#0" expanded="false" />
+                <element signature="e#8558#10392#0" expanded="false" />
+                <element signature="e#10416#12465#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreprocessLDA.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asgn3/codes/PreprocessLDA.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding>
+                <element signature="e#172#2368#0" expanded="false" />
+                <element signature="e#338#580#0" expanded="false" />
+                <element signature="e#639#1098#0" expanded="false" />
+                <element signature="e#1163#1335#0" expanded="false" />
+                <element signature="e#1407#1600#0" expanded="false" />
+                <element signature="e#1659#2368#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reorganize.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asgn3/codes/Reorganize.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#35#0" expanded="true" />
+                <element signature="e#144#1263#0" expanded="false" />
+                <element signature="e#306#427#0" expanded="false" />
+                <element signature="e#505#1263#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MinePatterns.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Asgn3/codes/MinePatterns.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3994778">
+              <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+              <folding>
+                <element signature="e#218#1112#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaxClosed.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asgn3/codes/MaxClosed.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="102" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+              <folding>
+                <element signature="e#215#1001#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rerank.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asgn3/codes/Rerank.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <element signature="e#168#2002#0" expanded="false" />
+                <element signature="e#2026#4105#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -46,7 +131,7 @@
         <entry file="file://$PROJECT_DIR$/Asgn3/codes/Apriori.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="159" column="21" selection-start-line="159" selection-start-column="8" selection-end-line="159" selection-end-column="21" />
+              <caret line="163" column="33" selection-start-line="163" selection-start-column="19" selection-end-line="163" selection-end-column="33" />
               <folding>
                 <element signature="e#150#552#0" expanded="false" />
                 <element signature="e#601#1185#0" expanded="false" />
@@ -56,7 +141,6 @@
                 <element signature="e#2252#3769#0" expanded="false" />
                 <element signature="e#3826#4328#0" expanded="false" />
                 <element signature="e#5516#6496#0" expanded="false" />
-                <element signature="e#6544#6643#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -82,7 +166,12 @@
         <option value="$PROJECT_DIR$/Asgn3/codes/WhoTextedFirst.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_12" />
         <option value="$PROJECT_DIR$/Asgn3/codes/Apriori.py" />
+        <option value="$PROJECT_DIR$/Asgn3/codes/PreprocessLDA.py" />
         <option value="$PROJECT_DIR$/Asgn3/codes/FrequentPatternsText.py" />
+        <option value="$PROJECT_DIR$/Asgn3/codes/Reorganize.py" />
+        <option value="$PROJECT_DIR$/Asgn3/codes/Rerank.py" />
+        <option value="$PROJECT_DIR$/Asgn3/codes/MaxClosed.py" />
+        <option value="$PROJECT_DIR$/Asgn3/codes/MinePatterns.py" />
       </list>
     </option>
   </component>
@@ -187,8 +276,8 @@
       <recent name="D:\Dropbox\Acads\UIUC\Sem1\CS 412\CS412-MPs\Asgn3\codes" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.FrequentPatternsText">
-    <configuration default="false" name="FrequentPatternsText" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.MinePatterns">
+    <configuration default="false" name="PreprocessLDA" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -200,29 +289,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CS412-MPs" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Asgn3/codes/FrequentPatternsText.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Asgn3/codes/PreprocessLDA.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="scratch_10" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CS412-MPs" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_10" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="WhoTextedFirst" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Reorganize" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -234,41 +306,58 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CS412-MPs" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Asgn3/codes/WhoTextedFirst.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Asgn3/codes/Reorganize.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="scratch_11" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="MinePatterns" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Asgn3/codes" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CS412-MPs" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_11" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Asgn3/codes/MinePatterns.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="scratch_12" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="MaxClosed" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Asgn3/codes" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CS412-MPs" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_12" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Asgn3/codes/MaxClosed.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Rerank" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Asgn3/codes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CS412-MPs" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Asgn3/codes/Rerank.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -396,19 +485,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.FrequentPatternsText" />
-      <item index="1" class="java.lang.String" itemvalue="Python.scratch_10" />
-      <item index="2" class="java.lang.String" itemvalue="Python.WhoTextedFirst" />
-      <item index="3" class="java.lang.String" itemvalue="Python.scratch_11" />
-      <item index="4" class="java.lang.String" itemvalue="Python.scratch_12" />
+      <item index="0" class="java.lang.String" itemvalue="Python.PreprocessLDA" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Reorganize" />
+      <item index="2" class="java.lang.String" itemvalue="Python.MinePatterns" />
+      <item index="3" class="java.lang.String" itemvalue="Python.MaxClosed" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Rerank" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.FrequentPatternsText" />
-        <item index="1" class="java.lang.String" itemvalue="Python.scratch_12" />
-        <item index="2" class="java.lang.String" itemvalue="Python.WhoTextedFirst" />
-        <item index="3" class="java.lang.String" itemvalue="Python.scratch_11" />
-        <item index="4" class="java.lang.String" itemvalue="Python.scratch_10" />
+        <item index="0" class="java.lang.String" itemvalue="Python.MinePatterns" />
+        <item index="1" class="java.lang.String" itemvalue="Python.MaxClosed" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Rerank" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Reorganize" />
+        <item index="4" class="java.lang.String" itemvalue="Python.PreprocessLDA" />
       </list>
     </recent_temporary>
   </component>
@@ -427,7 +516,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -435,18 +524,18 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -470,12 +559,24 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#608#1067#0" expanded="false" />
-            <element signature="e#1628#2337#0" expanded="false" />
-            <element signature="e#2370#3489#0" expanded="false" />
-            <element signature="e#2532#2653#0" expanded="false" />
-            <element signature="e#2731#3489#0" expanded="false" />
-            <element signature="e#6137#6398#0" expanded="false" />
+            <element signature="e#24#35#0" expanded="true" />
+            <element signature="e#134#2330#0" expanded="false" />
+            <element signature="e#300#542#0" expanded="false" />
+            <element signature="e#601#1060#0" expanded="false" />
+            <element signature="e#1125#1297#0" expanded="false" />
+            <element signature="e#1369#1562#0" expanded="false" />
+            <element signature="e#1621#2330#0" expanded="false" />
+            <element signature="e#2363#3482#0" expanded="false" />
+            <element signature="e#2525#2646#0" expanded="false" />
+            <element signature="e#2724#3482#0" expanded="false" />
+            <element signature="e#3554#4438#0" expanded="false" />
+            <element signature="e#4508#5294#0" expanded="false" />
+            <element signature="e#5341#6105#0" expanded="false" />
+            <element signature="e#6130#6391#0" expanded="false" />
+            <element signature="e#6466#7475#0" expanded="false" />
+            <element signature="e#7547#8535#0" expanded="false" />
+            <element signature="e#8558#10392#0" expanded="false" />
+            <element signature="e#10416#12465#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -493,7 +594,6 @@
             <element signature="e#2252#3769#0" expanded="false" />
             <element signature="e#3826#4328#0" expanded="false" />
             <element signature="e#5516#6496#0" expanded="false" />
-            <element signature="e#6544#6643#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -519,12 +619,24 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#608#1067#0" expanded="false" />
-            <element signature="e#1628#2337#0" expanded="false" />
-            <element signature="e#2370#3489#0" expanded="false" />
-            <element signature="e#2532#2653#0" expanded="false" />
-            <element signature="e#2731#3489#0" expanded="false" />
-            <element signature="e#6137#6398#0" expanded="false" />
+            <element signature="e#24#35#0" expanded="true" />
+            <element signature="e#134#2330#0" expanded="false" />
+            <element signature="e#300#542#0" expanded="false" />
+            <element signature="e#601#1060#0" expanded="false" />
+            <element signature="e#1125#1297#0" expanded="false" />
+            <element signature="e#1369#1562#0" expanded="false" />
+            <element signature="e#1621#2330#0" expanded="false" />
+            <element signature="e#2363#3482#0" expanded="false" />
+            <element signature="e#2525#2646#0" expanded="false" />
+            <element signature="e#2724#3482#0" expanded="false" />
+            <element signature="e#3554#4438#0" expanded="false" />
+            <element signature="e#4508#5294#0" expanded="false" />
+            <element signature="e#5341#6105#0" expanded="false" />
+            <element signature="e#6130#6391#0" expanded="false" />
+            <element signature="e#6466#7475#0" expanded="false" />
+            <element signature="e#7547#8535#0" expanded="false" />
+            <element signature="e#8558#10392#0" expanded="false" />
+            <element signature="e#10416#12465#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -542,7 +654,6 @@
             <element signature="e#2252#3769#0" expanded="false" />
             <element signature="e#3826#4328#0" expanded="false" />
             <element signature="e#5516#6496#0" expanded="false" />
-            <element signature="e#6544#6643#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -560,12 +671,24 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#608#1067#0" expanded="false" />
-            <element signature="e#1628#2337#0" expanded="false" />
-            <element signature="e#2370#3489#0" expanded="false" />
-            <element signature="e#2532#2653#0" expanded="false" />
-            <element signature="e#2731#3489#0" expanded="false" />
-            <element signature="e#6137#6398#0" expanded="false" />
+            <element signature="e#24#35#0" expanded="true" />
+            <element signature="e#134#2330#0" expanded="false" />
+            <element signature="e#300#542#0" expanded="false" />
+            <element signature="e#601#1060#0" expanded="false" />
+            <element signature="e#1125#1297#0" expanded="false" />
+            <element signature="e#1369#1562#0" expanded="false" />
+            <element signature="e#1621#2330#0" expanded="false" />
+            <element signature="e#2363#3482#0" expanded="false" />
+            <element signature="e#2525#2646#0" expanded="false" />
+            <element signature="e#2724#3482#0" expanded="false" />
+            <element signature="e#3554#4438#0" expanded="false" />
+            <element signature="e#4508#5294#0" expanded="false" />
+            <element signature="e#5341#6105#0" expanded="false" />
+            <element signature="e#6130#6391#0" expanded="false" />
+            <element signature="e#6466#7475#0" expanded="false" />
+            <element signature="e#7547#8535#0" expanded="false" />
+            <element signature="e#8558#10392#0" expanded="false" />
+            <element signature="e#10416#12465#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -583,7 +706,6 @@
             <element signature="e#2252#3769#0" expanded="false" />
             <element signature="e#3826#4328#0" expanded="false" />
             <element signature="e#5516#6496#0" expanded="false" />
-            <element signature="e#6544#6643#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -601,12 +723,24 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#608#1067#0" expanded="false" />
-            <element signature="e#1628#2337#0" expanded="false" />
-            <element signature="e#2370#3489#0" expanded="false" />
-            <element signature="e#2532#2653#0" expanded="false" />
-            <element signature="e#2731#3489#0" expanded="false" />
-            <element signature="e#6137#6398#0" expanded="false" />
+            <element signature="e#24#35#0" expanded="true" />
+            <element signature="e#134#2330#0" expanded="false" />
+            <element signature="e#300#542#0" expanded="false" />
+            <element signature="e#601#1060#0" expanded="false" />
+            <element signature="e#1125#1297#0" expanded="false" />
+            <element signature="e#1369#1562#0" expanded="false" />
+            <element signature="e#1621#2330#0" expanded="false" />
+            <element signature="e#2363#3482#0" expanded="false" />
+            <element signature="e#2525#2646#0" expanded="false" />
+            <element signature="e#2724#3482#0" expanded="false" />
+            <element signature="e#3554#4438#0" expanded="false" />
+            <element signature="e#4508#5294#0" expanded="false" />
+            <element signature="e#5341#6105#0" expanded="false" />
+            <element signature="e#6130#6391#0" expanded="false" />
+            <element signature="e#6466#7475#0" expanded="false" />
+            <element signature="e#7547#8535#0" expanded="false" />
+            <element signature="e#8558#10392#0" expanded="false" />
+            <element signature="e#10416#12465#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -651,7 +785,7 @@
     <entry file="file://$PROJECT_DIR$/Asgn3/codes/Apriori.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="159" column="21" selection-start-line="159" selection-start-column="8" selection-end-line="159" selection-end-column="21" />
+          <caret line="163" column="33" selection-start-line="163" selection-start-column="19" selection-end-line="163" selection-end-column="33" />
           <folding>
             <element signature="e#150#552#0" expanded="false" />
             <element signature="e#601#1185#0" expanded="false" />
@@ -661,22 +795,92 @@
             <element signature="e#2252#3769#0" expanded="false" />
             <element signature="e#3826#4328#0" expanded="false" />
             <element signature="e#5516#6496#0" expanded="false" />
-            <element signature="e#6544#6643#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asgn3/codes/Rerank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#168#2002#0" expanded="false" />
+            <element signature="e#2026#4105#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asgn3/codes/Reorganize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <element signature="e#144#1263#0" expanded="false" />
+            <element signature="e#306#427#0" expanded="false" />
+            <element signature="e#505#1263#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Asgn3/codes/FrequentPatternsText.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13822526">
-          <caret line="214" column="38" selection-start-line="214" selection-start-column="38" selection-end-line="214" selection-end-column="38" />
+        <state vertical-scroll-proportion="-7.034483">
+          <caret line="343" column="19" selection-start-line="343" selection-start-column="19" selection-end-line="343" selection-end-column="19" />
           <folding>
-            <element signature="e#608#1067#0" expanded="false" />
-            <element signature="e#1628#2337#0" expanded="false" />
-            <element signature="e#2370#3489#0" expanded="false" />
-            <element signature="e#2532#2653#0" expanded="false" />
-            <element signature="e#2731#3489#0" expanded="false" />
-            <element signature="e#6137#6398#0" expanded="false" />
+            <element signature="e#24#35#0" expanded="true" />
+            <element signature="e#134#2330#0" expanded="false" />
+            <element signature="e#300#542#0" expanded="false" />
+            <element signature="e#601#1060#0" expanded="false" />
+            <element signature="e#1125#1297#0" expanded="false" />
+            <element signature="e#1369#1562#0" expanded="false" />
+            <element signature="e#1621#2330#0" expanded="false" />
+            <element signature="e#2363#3482#0" expanded="false" />
+            <element signature="e#2525#2646#0" expanded="false" />
+            <element signature="e#2724#3482#0" expanded="false" />
+            <element signature="e#3554#4438#0" expanded="false" />
+            <element signature="e#4508#5294#0" expanded="false" />
+            <element signature="e#5341#6105#0" expanded="false" />
+            <element signature="e#6130#6391#0" expanded="false" />
+            <element signature="e#6466#7475#0" expanded="false" />
+            <element signature="e#7547#8535#0" expanded="false" />
+            <element signature="e#8558#10392#0" expanded="false" />
+            <element signature="e#10416#12465#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asgn3/codes/PreprocessLDA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <element signature="e#172#2368#0" expanded="false" />
+            <element signature="e#338#580#0" expanded="false" />
+            <element signature="e#639#1098#0" expanded="false" />
+            <element signature="e#1163#1335#0" expanded="false" />
+            <element signature="e#1407#1600#0" expanded="false" />
+            <element signature="e#1659#2368#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asgn3/codes/MaxClosed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding>
+            <element signature="e#215#1001#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asgn3/codes/MinePatterns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3994778">
+          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+          <folding>
+            <element signature="e#218#1112#0" expanded="false" />
           </folding>
         </state>
       </provider>
