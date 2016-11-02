@@ -97,6 +97,7 @@ class Apriori():
                 break
             else:
                 self.L.append(Lnew)
+
         return self.L
 
     def getConfidence(self, subset1, subset2):
@@ -125,8 +126,13 @@ class Apriori():
                 # Check if each subset of the current level is a member of any subset of the next level
                 for itemset in self.Lcounts[idx+1]:
                     closedFlag = True
+                    if type(itemset) == str:
+                        setItemset = set()
+                        setItemset.add(itemset)
+                    else:
+                        setItemset = set(itemset)
                     for bigItemset in self.Lcounts[idx+2]:
-                        if set(itemset) <= set(bigItemset):
+                        if setItemset <= set(bigItemset):
                             if self.Lcounts[idx+1][itemset] == self.Lcounts[idx+2][bigItemset]:
                                 closedFlag = False
                                 break
@@ -149,8 +155,13 @@ class Apriori():
                 # Check if each subset of the current level is a member of any subset of the next level
                 for itemset in self.Lcounts[idx+1]:
                     maxFlag = True
+                    if type(itemset) == str:
+                        setItemset = set()
+                        setItemset.add(itemset)
+                    else:
+                        setItemset = set(itemset)
                     for bigItemset in self.Lcounts[idx+2]:
-                        if set(itemset) <= set(bigItemset):
+                        if setItemset <= set(bigItemset):
                             maxFlag = False
                             break
                     if maxFlag == True:

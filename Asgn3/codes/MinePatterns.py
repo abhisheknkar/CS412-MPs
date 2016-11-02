@@ -8,7 +8,7 @@ from PreprocessLDA import LDAInput
 
 def getFrequentPatterns(folderIn, folderOut, relativeMinSup=0.01):
     print 'Getting Frequent Patterns'
-    numFiles = 1
+    numFiles = 5
     for i in range(numFiles):
         f1 = open(folderOut + 'pattern-'+str(i)+'.txt','w')
         apriori = Apriori(folderIn+'topic-'+str(i)+'.txt', setRelative=True, relativeMinSup=relativeMinSup)
@@ -27,6 +27,7 @@ def getFrequentPatterns(folderIn, folderOut, relativeMinSup=0.01):
                 patternString = ' '.join(pattern[0])
             f1.write(str(pattern[1])+ ' '+ patternString+'\n')
         f1.close()
+        print 'Frequent Patterns Found:', len(allPatterns)
 
 def getFrequentPatternsWords(folderIn, folderOut, minSupPercentage=5):
     ldainput = LDAInput()

@@ -15,7 +15,7 @@ def getClosedPatterns(folderIn, folderOut, minSupPercentage=5):
         apriori.execute()
 
         closedPatterns = apriori.getClosedPatterns()
-        print 'Closed Patterns found: ', len(closedPatterns)
+        print 'Closed Patterns found in file', i, ': ',len(closedPatterns)
 
         # Sort the frequent patterns
         sortedPatterns = sorted(closedPatterns.items(), key=operator.itemgetter(1),reverse=True)
@@ -36,7 +36,7 @@ def getMaxPatterns(folderIn, folderOut):
         apriori.execute()
 
         maxPatterns = apriori.getMaxPatterns()
-        print 'Max Patterns found: ', len(maxPatterns)
+        print 'Max Patterns found in file', i, ': ',len(maxPatterns)
         # Sort the frequent patterns
         sortedPatterns = sorted(maxPatterns.items(), key=operator.itemgetter(1),reverse=True)
         for pattern in sortedPatterns:

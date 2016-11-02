@@ -37,8 +37,8 @@ def getKERTRank(omega = 0.5, gamma = 0.9, numFiles=5, folderOut = '../data/EC/')
                     words.append(reverseVocab[int(idx)])
                 patternString2 = ' '.join(words)
 
-            if completeness[i][pattern[0]] >= gamma:
-                print i,patternString2, completeness[i][pattern[0]]
+            # if completeness[i][pattern[0]] >= gamma:
+            #     print i,patternString2, completeness[i][pattern[0]]
 
             f1.write(str(pattern[1])+ ' '+ patternString1+'\n')
             f2.write(str(pattern[1])+ ' '+ patternString2+'\n')
@@ -90,6 +90,7 @@ def getPhraseness(numFiles=5):
                     total += math.log(float(ftpdict[i][constituent])/len(Dtfiles[i]),2)
                 phraseness[i][pattern] = math.log(float(ftpdict[i][pattern])/len(Dtfiles[i]),2) - total
             # print phraseness[i][pattern]
+        # print len(Dtfiles[i])
     return phraseness
 
 if __name__=='__main__':

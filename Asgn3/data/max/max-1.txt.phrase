@@ -1,21 +1,8 @@
-1726 data
-1153 algorithm
-1055 mining
-733 tree
-677 efficient
-632 using
-606 pattern
-584 based
 557 graph
-525 clustering
-502 time
-464 rule
-423 stream
 396 network
 370 data mining
 353 query
 344 set
-336 association
 312 classification
 305 dimensional
 295 approach
@@ -29,10 +16,8 @@
 238 method
 237 classifier
 233 data stream
-227 frequent
 222 estimation
 221 space
-209 series
 208 approximate
 206 multi
 203 search
@@ -40,7 +25,6 @@
 201 matching
 193 series time
 193 feature
-190 decision
 188 bayesian
 181 sequence
 177 application
@@ -60,21 +44,19 @@
 146 index
 145 similarity
 143 attribute
-141 nearest
 139 metric
 138 sequential
-137 neighbor
 137 processing
 136 reduction
 136 preserving
 131 cluster
 130 cost
-128 data using
 128 dynamic
+128 data using
 128 regression
 128 discovery
-127 privacy
 127 frequent mining
+127 privacy
 126 via
 124 algorithm efficient
 121 neighbor nearest

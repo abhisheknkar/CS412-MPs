@@ -1,24 +1,15 @@
-1527 database
-1224 system
-902 object
-580 query
-521 distributed
 465 using
 405 system database
 386 based
 377 image
 363 model
-351 oriented
-338 processing
-333 control
 307 network
-280 management
 274 performance
 252 environment
 235 recognition
 229 transaction
-223 multi
 223 approach
+223 multi
 214 dynamic
 207 robot
 206 information
@@ -26,7 +17,6 @@
 196 motion
 191 tracking
 172 processing query
-171 relational
 162 architecture
 162 mobile
 157 object database oriented
@@ -39,7 +29,6 @@
 140 parallel
 134 shape
 133 video
-133 concurrency
 131 complex
 131 evaluation
 129 human
@@ -50,8 +39,8 @@
 120 temporal
 120 agent
 119 optimization
-115 vision
 115 recovery
+115 vision
 114 multiple
 114 active
 113 visual
