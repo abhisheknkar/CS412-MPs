@@ -59,7 +59,6 @@ def getFrequentPatternsWords(folderIn, folderOut, minSupPercentage=5):
             f1.write(str(pattern[1])+ ' '+ patternString+'\n')
         f1.close()
 
-
 if __name__ == '__main__':
     t0 = time.time()
     getFrequentPatterns('../data/transactionsByTopic/','../data/patterns/')
