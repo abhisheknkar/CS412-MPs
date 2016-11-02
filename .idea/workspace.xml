@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd504918-e05d-40b5-a823-7841058d57eb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/codes/Apriori.py" afterPath="$PROJECT_DIR$/Asgn3/codes/Apriori.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/codes/EC.py" afterPath="$PROJECT_DIR$/Asgn3/codes/EC.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/codes/MaxClosed.py" afterPath="$PROJECT_DIR$/Asgn3/codes/MaxClosed.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/codes/MinePatterns.py" afterPath="$PROJECT_DIR$/Asgn3/codes/MinePatterns.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/data/max/max-0.txt.phrase" afterPath="$PROJECT_DIR$/Asgn3/data/max/max-0.txt.phrase" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/data/max/max-0.txt" afterPath="$PROJECT_DIR$/Asgn3/data/max/max-0.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/data/max/max-1.txt.phrase" afterPath="$PROJECT_DIR$/Asgn3/data/max/max-1.txt.phrase" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/data/max/max-1.txt" afterPath="$PROJECT_DIR$/Asgn3/data/max/max-1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/data/max/max-2.txt.phrase" afterPath="$PROJECT_DIR$/Asgn3/data/max/max-2.txt.phrase" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/data/max/max-2.txt" afterPath="$PROJECT_DIR$/Asgn3/data/max/max-2.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/data/max/max-3.txt.phrase" afterPath="$PROJECT_DIR$/Asgn3/data/max/max-3.txt.phrase" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/data/max/max-3.txt" afterPath="$PROJECT_DIR$/Asgn3/data/max/max-3.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/data/max/max-4.txt.phrase" afterPath="$PROJECT_DIR$/Asgn3/data/max/max-4.txt.phrase" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn3/data/max/max-4.txt" afterPath="$PROJECT_DIR$/Asgn3/data/max/max-4.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="dd504918-e05d-40b5-a823-7841058d57eb" name="Default" comment="" />
     <ignored path="CS412-MPs.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -228,7 +212,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CS 440/CS440-Assignment3" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
     <property name="com.intellij.ide.scratch.NewScratchFileAction" value="Python" />
@@ -486,7 +470,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32626426" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
