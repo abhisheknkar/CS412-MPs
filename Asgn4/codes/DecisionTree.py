@@ -1,46 +1,17 @@
 __author__ = 'Abhishek'
 import math
-
-class DataReader():
-    def __init__(self, train_file='', test_file=''):
-        self.train_file = train_file
-        self.test_file = test_file
-
-        self.readMatrices()
-
-    def readMatrices(self):
-        (self.trainX, self.trainY) = self.dataset2Mat(self.train_file)
-        (self.testX, self.testY) = self.dataset2Mat(self.test_file)
-
-    def dataset2Mat(self, file):
-        f = open(file, 'r')
-        matX = []
-        matY = []
-        for line in f.readlines():
-            lsplit = line.strip().split(' ')
-            matY.append(lsplit[0]) # Append label to the Y matrix
-            xVec = []   # To hold the feature values
-            for feature in lsplit[1:]:
-                if ':' in feature:
-                    value = feature[feature.index(':')+1:]
-                else:
-                    value = feature
-                xVec.append(value)
-            matX.append(xVec)
-        return (matX, matY)
+from DataReader import DataReader
 
 class DecisionTree():
     def __init__(self, data):
         self.missingClass = 0
         self.data = data
-        self.rIndex = self.getReverseIndex()
+        self.rIndex = self.getReverseIndex(self.data.trainX)
 
         varsLeft = self.rIndex.keys()   # Variables yet to be split
         root = DecisionNode()   # Root of the tree
 
         self.treeStates = {}    # Hashmap to store the nodes in the tree encounterd so far
-
-        self.maxLevel = 0
         self.buildTree(root, varsLeft)
 
     def buildTree(self, root, varsLeft):
@@ -85,12 +56,12 @@ class DecisionTree():
             decision = None
         return (points, labelDist, decision)
 
-    def getReverseIndex(self):
+    def getReverseIndex(self, data):
         # For each value of each attribute, get set of data points that satisfy it
         rIndex = {}
-        for i in range(len(self.data.trainX[0])):
+        for i in range(len(data[0])):
             rIndex[i] = {}
-        for idx1,point in enumerate(self.data.trainX):
+        for idx1,point in enumerate(data):
             for idx2,att in enumerate(point):
                 if att not in rIndex[idx2]:
                     rIndex[idx2][att] = set()
@@ -168,12 +139,17 @@ class DecisionTree():
             f.close()
 
         accuracy = float(correct) / len(self.data.testY)
-        print 'Accuracy:', accuracy, ', Missing node:', self.missingClass
+        print 'Accuracy:', accuracy
+        # print 'Missing node:', self.missingClass
 
     def predictPoint(self, point):
         state = self.treeStates[()]
         while(1):
             if state.isTerminal:
+                # if len(state.state) == len(point):
+                #     for i in range(len(point)):
+                #         print str(i+1)+':'+point[i],
+                #     print '\n'
                 return state.decision
             else:
                 nextSplitVar = state.nextSplitVar
@@ -208,6 +184,7 @@ def testGiven():
     for datasetID in range(1,5):
         print 'Dataset', datasetID, ',', fileNames[str(datasetID)]
         filePrefix = '../data/'+str(datasetID)+'/'+fileNames[str(datasetID)]
+        # data = DataReader(filePrefix+'.train', filePrefix+'.test')
         data = DataReader(filePrefix+'.train', filePrefix+'.test')
         tree = DecisionTree(data)
         tree.predict(outputFile=filePrefix+'.pred', writeFlag=True)
