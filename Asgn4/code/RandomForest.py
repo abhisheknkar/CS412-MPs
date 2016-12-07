@@ -1,6 +1,7 @@
 __author__ = 'Abhishek'
 
 from DataReader import DataReader
+import sys
 from DecisionTree import *
 import random
 
@@ -138,16 +139,51 @@ class RandomForest(DecisionTree):
                         break
         return max(set(decisions), key=decisions.count)
 
-def testGiven():
+def testGivenDatasets():
     fileNames = {'0':'balance-scale','1':'balance-scale','2':'nursery.data', '3':'led', '4':'poker'}
-    for datasetID in range(0,5):
+
+    forestSizes = [1,2, 3, 5, 10, 50, 100]
+    # forestSizes = [100]
+
+    # for datasetID in range(1,5):
+    for datasetID in range(4, 5):
         print 'Dataset', datasetID, ',', fileNames[str(datasetID)]
-        filePrefix = '../data/'+str(datasetID)+'/'+fileNames[str(datasetID)]
-        # data = DataReader(filePrefix+'.train', filePrefix+'.test')
-        data = DataReader(filePrefix+'.train', filePrefix+'.test')
-        forest = RandomForest(data, numTrees=20, subsetSize=2)
-        forest.predict(outputFile=filePrefix+'.pred', writeFlag=True)
-        # break
+        f = open('results/RandomForest/dataset'+str(datasetID)+'Search.csv', 'w')
+        f.write('Forest size,Subset Size, Accuracy\n')
+        for forestSize in forestSizes:
+            filePrefix = '../data/'+str(datasetID)+'/'+fileNames[str(datasetID)]
+            data = DataReader(filePrefix+'.train', filePrefix+'.test')
+
+            for subsetSize in range(1,int(len(data.trainX[0])**0.5)+1):
+            # for subsetSize in [int(len(data.trainX[0])**0.5)]:
+                print 'Forestsize', forestSize, 'Subsetsize:', subsetSize
+                forest = RandomForest(data, numTrees=10, subsetSize=subsetSize)
+                forest.predict(outputFile=filePrefix+'.pred', writeFlag=True)
+                (CM, accuracy, sensitivity, specificity, precision, recall, f1, fpoint5, f2) = getMeasures(forest)
+                # f.write('Forest size='+str(forestSize)+', Subsetsize='+str(subsetSize)+', Accuracy='+str(accuracy)+'\n')
+                f.write(str(forestSize) + ',' + str(subsetSize) + ','+ str(accuracy) + '\n')
+
+                # print (accuracy, sensitivity, specificity, precision, recall, f1, fpoint5, f2)
+                f0 = open('results/RandomForest/dataset'+str(datasetID)+'.csv', 'w')
+                f0.write('Accuracy,'+str(accuracy)+'\n\n')
+                f0.write('Class,Sensitivity,Specificity,Precision,Recall,F1,F0.5,F2\n')
+                for i in range(len(sensitivity)):
+                    f0.write(str(i) + ',' + str("{0:.3f}".format(sensitivity[i])) + ',' + str("{0:.3f}".format(specificity[i])) + ',' + str("{0:.3f}".format(precision[i])) + ',' + str("{0:.3f}".format(recall[i])) + ',' + str("{0:.3f}".format(f1[i])) + ',' + str("{0:.3f}".format(fpoint5[i])) + ',' + str("{0:.3f}".format(f2[i])) + '\n')
+                f0.close()
+        f.close()
+
+def runRandomForest(trainPath, testPath):
+    data = DataReader(trainPath, testPath)
+    subsetSize = int(len(data.trainX[0]) ** 0.5)
+    forest = RandomForest(data, numTrees=10, subsetSize=subsetSize)
+    forest.predict()
+    (CM, accuracy, sensitivity, specificity, precision, recall, f1, fpoint5, f2) = getMeasures(forest)
+    for row in CM:
+        print ' '.join([str(int(x)) for x in row])
 
 if __name__ == '__main__':
-    testGiven()
+    # testGivenDatasets()
+    if len(sys.argv) < 2:
+        print 'Usage: python DecisionTree.py training_file test_file'
+    else:
+        runRandomForest(trainPath=sys.argv[1], testPath=sys.argv[2])

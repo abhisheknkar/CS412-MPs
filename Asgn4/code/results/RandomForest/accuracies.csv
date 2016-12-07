@@ -1,0 +1,5 @@
+Dataset,Accuracy
+balance,0.622
+nursery,0.969
+led,0.858
+poker,0.677

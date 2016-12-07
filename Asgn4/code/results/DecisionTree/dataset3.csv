@@ -1,0 +1,5 @@
+Accuracy,0.858
+
+Class,Sensitivity,Specificity,Precision,Recall,F1,F0.5,F2
+0,0.781,0.893,0.765,0.781,0.773,0.768,0.778
+1,0.893,0.781,0.901,0.893,0.897,0.899,0.894

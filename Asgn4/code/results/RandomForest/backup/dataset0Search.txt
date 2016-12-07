@@ -1,0 +1,4 @@
+Forest size=5, Subsetsize=1, Accuracy=1.0
+Forest size=10, Subsetsize=1, Accuracy=1.0
+Forest size=100, Subsetsize=1, Accuracy=1.0
+Forest size=500, Subsetsize=1, Accuracy=1.0
